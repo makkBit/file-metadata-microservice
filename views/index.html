@@ -2,31 +2,50 @@
 <html>
 <head>
 	<title>file size api</title>
+   
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
 </head>
 <body>
-	<body class="text-center">
+	
+    <div class="box text-center">
+        <div class="content">
+            <h3> file size api </h3>
 
-    <div class="page-header">
-       <h1>file size api</h1>
+            <blockquote>
+                User can submit a form-data object that includes a file upload. When user submit something, user will receive the file size in bytes within the JSON response.
+            </blockquote>
+
+            <br/>
+
+            <form action="/upload" method="POST" role="form"  enctype="multipart/form-data">
+                <input id="file" type="file" name="recfile" />
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            
+            <br/><br/>
+            <h4> Sample Output: </h4>
+            <p class="well">
+                {"size":"273599bytes"}
+            </p>
+
+            <a class="repo" href="https://github.com/makkBit/file-metadata-microservice" target="_blank">
+                github repo
+            </a>
+
+            <br/>
+
+            <p> 
+                made by
+                <a href="https://twitter.com/makk_bit" target="_blank"> mahak </a>
+            </p>
+
+        </div>
     </div>
 
-    <h4>submit a file to view its size</h4>
-
-    <form action="/upload" method="POST" role="form"  enctype="multipart/form-data">
-
-    	<input id="file" type="file" name="recfile" />
-
-    	<button type="submit" class="btn btn-primary">Submit</button>
-
-    </form>
-
-    <br><br><br>
-
-   	<a class="repo" href="https://github.com/makkBit/file-metadata-microservice" target="_blank">click here for github repo</a><br><br>
-
-    <p>made by<a href="https://twitter.com/makk_bit" target="_blank"> mahak</a></p>
 
 </body>
 </html>
