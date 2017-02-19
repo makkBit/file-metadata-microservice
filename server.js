@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express(); 
 
+//configure pug
+app.set('views','./views');
+app.set('view engine','pug');
 
 //imports app js files
 const api = require('./app/api/fileSize.js');

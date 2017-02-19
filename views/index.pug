@@ -1,0 +1,40 @@
+html
+  head
+    title file size api    
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    style
+      include css/style.css
+      include css/bootstrap.min.css
+      
+  body
+    .box.text-center
+      .content
+        h3  file size api 
+        |             
+        blockquote
+          | User can submit a form-data object that includes a file upload. When user submit something, user will receive the file size in bytes within the JSON response.
+        |             
+        br
+        |             
+        form(action="/upload", method="POST", role="form", enctype="multipart/form-data")
+          input#file(type="file", name="recfile")
+          |                 
+          button.btn.btn-primary(type="submit") Submit
+        |             
+        |             
+        br
+        br
+        |             
+        h4  Sample Output: 
+        |             
+        p.well
+          | {"size":"273599bytes"}
+        |             
+        a.repo(href="https://github.com/makkBit/file-metadata-microservice", target="_blank")
+          | github repo
+        |             
+        br
+        |             
+        p
+          | made by
+          a(href="https://twitter.com/makk_bit", target="_blank")  mahak 
